@@ -7,13 +7,13 @@
 
     
 <div class="contenedor_imagenes">
-    <h2 class="titulo_contenedor_imagenes">trabajadores</h2>
+    <h2 class="titulo_contenedor_imagenes">Trabajadores</h2>
         {% for t in tecnicos %}
         <div class="imagenes">
             {% if t.imagen %}
             <img src="{{ t.imagen.url }}" alt="Caratula 1">
             {% endif %}
-            <a href="#">Ver disponibilidad</a>
+            <a href="#">Ver Disponibilidad</a>
         </div>
         {% endfor %}
         

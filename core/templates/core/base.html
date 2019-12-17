@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Metalurgica Met</title>
+    <title>Metalúrgica Met</title>
     {% load static %}
     
     {% block css%}
@@ -27,30 +27,30 @@
                             <a href="#">Usuario: {{ user.username }}</a>
                         </li>
                         <li>
-                            <a href="{% url 'logout' %}">Cerrar sesion</a>
+                            <a href="{% url 'logout' %}">Cerrar sesión</a>
                         </li>
                         <li>
-                            <a href="{% url 'listado_clientes'%}">listado_de_clientes</a>
+                            <a href="{% url 'listado_clientes'%}">Listado de Clientes</a>
                         </li>
                         <li>
-                            <a href="{% url 'nuevo_ot'%}">Nueva_Orden_de_trabajo</a>
+                            <a href="{% url 'nuevo_ot'%}">Nueva Orden de Trabajo</a>
                         </li>
                         <li>
-                            <a href="{% url 'listado_ot'%}">Listado_de_O.T.</a>
+                            <a href="{% url 'listado_ot'%}">Listado de O.T.</a>
                         </li>
     
                         <li>
-                            <a href="{% url 'listado_tecnico'%}">listado_de_tecnico</a>
+                            <a href="{% url 'listado_tecnico'%}">Listado de técnico</a>
                         </li>
                         <li>
-                            <a href="{% url 'nuevo_tecnico'%}">Nueva_tecnico</a>
+                            <a href="{% url 'nuevo_tecnico'%}">Nueva técnico</a>
                         </li>
                         <li>
-                            <a href="{% url 'nuevo_cliente'%}">nuevo_cliente</a>
+                            <a href="{% url 'nuevo_cliente'%}">Nuevo cliente</a>
                         </li>
                     {% else %}
                     <li>
-                        <a href="{% url 'login'%}">Iniciar sesion</a>
+                        <a href="{% url 'login'%}">Iniciar sesión</a>
                     </li>
                     <li>
                         <a href="{% url 'registro_usuario'%}">Registrar</a>
@@ -63,7 +63,7 @@
                         <a href="{% url 'contacto' %}">Contacto</a>
                     </li>
                     <li>
-                        <a href="{% url 'galeria' %}">galeria</a>
+                        <a href="{% url 'galeria' %}">Galería</a>
                     </li>
                 
                             
@@ -90,29 +90,28 @@
             <img src="{% static 'core/img/logo.png' %}" alt="logo" class="logo_footer">
         </div>
         <div>
-            <h4>buscanos</h4>
+            <h4>Búscanos</h4>
             <hr>
             <ul>
-                <li>facebook , instagram , telegram</li>
-                <li>fono:56 9123123123</li>
-                <li>mayor informacion</li>
+                <li>Facebook - Instagram  - Telegram</li>
+                <li>Teléfono:56 9123123123</li>
+                <li>Mayor información</li>
             </ul>
         </div>
         <div>
-                <h4>Programadores</h4>
+                <h4>Programadores:</h4>
                 <hr>
                 <ul>
-                    <li>julio cordova</li>
-                    <li>lucas rodriguez</li>
+                    <li>Julio Cordova</li>
+                    <li>Lucas Rodriguez</li>
                 </ul>
         </div>
         <div>
-                <h4>Derechos reservados </h4>
+                <h4>Derechos Reservados </h4>
                 <hr>
                 <ul>
-                    <li>app de reparacion ascensores</li>
-                    <li>diciembre 2019</li>
-                    <li>The_nampa </li>
+                    <li>App de reparación ascensores</li>
+                    <li>Diciembre 2019</li>
                 </ul>
         </div>
     </footer>
