@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block css%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
+{% endblock %}
+
+{% block javascript %} 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+<script src="{% static 'core/js/slider.js' %}"></script>
+{% endblock %}
+
+{% block contenido %}
+<div id="principal">
+    <br>
+    <div class="contenedor_formulario">
+        <div>
+            
+           <div class="slider">
+               <div>
+                   <img src="{% static 'core/img/s1.jpg' %}" alt="slider 1" class="imagen_slider" title="imagen 1">
+               </div>
+               <div>
+                   <img src="{% static 'core/img/s2.jpg' %}" alt="slider 2" class="imagen_slider" title="imagen 2">
+               </div>
+               <div>
+                   <img src="{% static 'core/img/s3.jpg' %}" alt="slider 3" class="imagen_slider" title="las mejores ofertas!!!!!">
+               </div>
+           </div>
+
+        </div>
+       
+    </div>
+
+</div>
+
+
+{% endblock %}

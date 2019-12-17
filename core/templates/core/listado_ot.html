@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block javascript %}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="{% static 'core/js/confirmacion.js' %}"></script>
+
+{% endblock %}
+
+{% block contenido %}
+<h2>listado de Ordenes de trabajo</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>O.T.</th>
+        <th>Cliente</th>
+        <th>Fecha</th>
+        <th>Hora inicio</th>
+        <th>Hora termino</th>
+        <th>id.ascensor</th>
+        <th>Modelo ascensor</th>
+        <th>Fallas detectadas</th>
+        <th>Reparacion efectuadas</th>
+        <th>piezas cambiadas</th>
+        <th>Tecnico acargo</th>
+    </tr>
+
+    {% for o in ordentrabajos %}
+    <tr>
+        <td>{{o.ot}} </td>
+        <td>{{o.cliente}}</td>
+        <td>{{o.fecha}}</td>
+        <td>{{o.hora_inicio}} </td>
+        <td>{{o.hora_termino}} </td>
+        <td>{{o.id_ascensor}} </td>
+        <td>{{o.modelo_ascensor}} </td>
+        <td>{{o.fallas_detectadas}} </td>
+        <td>{{o.reparacion_efectuada}} </td>
+        <td>{{o.piezas_cambiadas}} </td>
+        <td>{{o.tecnico}} </td>
+        <td>
+            <a href="{% url 'modificar_ot' o.id %}">Modificar</a>
+            <a href="#" onclick="confirmarEliminacion2({{o.id}})">Eliminar</a>
+        </td>
+       
+            
+        </td>
+    </tr>
+
+
+    {% endfor %}
+</table>
+
+{% endblock %}

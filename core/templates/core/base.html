@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Metalurgica Met</title>
+    {% load static %}
+    
+    {% block css%}
+
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+
+</head>
+<body >
+    <header>
+      
+        <img src="{% static 'core/img/logo.png' %}" alt="Logo" class="logo">
+
+        <nav>
+                <ul>
+                    {% if user.is_authenticated %}
+                        <li>
+                            <a href="#">Usuario: {{ user.username }}</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'logout' %}">Cerrar sesion</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'listado_clientes'%}">listado_de_clientes</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'nuevo_ot'%}">Nueva_Orden_de_trabajo</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'listado_ot'%}">Listado_de_O.T.</a>
+                        </li>
+    
+                        <li>
+                            <a href="{% url 'listado_tecnico'%}">listado_de_tecnico</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'nuevo_tecnico'%}">Nueva_tecnico</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'nuevo_cliente'%}">nuevo_cliente</a>
+                        </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'login'%}">Iniciar sesion</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'registro_usuario'%}">Registrar</a>
+                    </li>
+                    {% endif%}
+                    <li>
+                        <a href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'contacto' %}">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'galeria' %}">galeria</a>
+                    </li>
+                
+                            
+                </ul>   
+        </nav>
+        
+    </header>
+
+    <div id="principal">
+       <br>
+
+       <div class="container">
+            {% block contenido %}
+
+            {% endblock %}
+       </div>
+       
+ 
+        
+    </div>
+
+    <footer class="hide_on_mobile">
+        <div>
+            <img src="{% static 'core/img/logo.png' %}" alt="logo" class="logo_footer">
+        </div>
+        <div>
+            <h4>buscanos</h4>
+            <hr>
+            <ul>
+                <li>facebook , instagram , telegram</li>
+                <li>fono:56 9123123123</li>
+                <li>mayor informacion</li>
+            </ul>
+        </div>
+        <div>
+                <h4>Programadores</h4>
+                <hr>
+                <ul>
+                    <li>julio cordova</li>
+                    <li>lucas rodriguez</li>
+                </ul>
+        </div>
+        <div>
+                <h4>Derechos reservados </h4>
+                <hr>
+                <ul>
+                    <li>app de reparacion ascensores</li>
+                    <li>diciembre 2019</li>
+                    <li>The_nampa </li>
+                </ul>
+        </div>
+    </footer>
+
+    <!--footer mobile-->
+    <footer class="hide_on_desktop">
+        <img src="img/logo.png" alt="Logo" class="logo_footer_mobile">
+    </footer>
+    
+    
+    
+ 
+{% block javascript %} 
+
+{% endblock %}
+</body>
+</html>

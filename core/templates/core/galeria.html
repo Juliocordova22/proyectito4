@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+
+    
+<div class="contenedor_imagenes">
+    <h2 class="titulo_contenedor_imagenes">Cartelera semanal</h2>
+        {% for t in tecnicos %}
+        <div class="imagenes">
+            {% if t.imagen %}
+            <img src="{{ t.imagen.url }}" alt="Caratula 1">
+            {% endif %}
+            <a href="#">Ver horarios</a>
+        </div>
+        {% endfor %}
+        
+</div>
+     
+     
+
+     
+ 
+
+
+{% endblock %}
