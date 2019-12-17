@@ -3,7 +3,7 @@
 pagina funcionando en pythonanywhere
 http://julcordova.pythonanywhere.com/
 
-integrantes : julio cordova , lucas rodriguez
+Integrantes : Julio Cordova ─ Lucas Rodríguez
 
 usuario normal:prueba1
         contraseña:adminadmin
